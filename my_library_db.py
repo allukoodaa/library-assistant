@@ -183,6 +183,7 @@ if __name__ == '__main__':
     # Avoid FileNotFoundErrors along the way.
     if not os.path.exists(filepath):
         print('ERROR!\nFile not found, check filename/path.')
+        sys.exit(1)
     # Execute main() in the try-except block to exit the program gracefully.
     try:
         main()
@@ -190,5 +191,5 @@ if __name__ == '__main__':
         print('\nProgram terminated by user. Shutting down.')
         sys.exit(0)
     except EOFError:  # User sends Ctrl-D or Ctrl-Z+Enter
-        print('\nIllegal input: "EOF signal". This incident will be reported. ;) jk')
+        print('\nIllegal input: "EOF signal". This incident will be reported... ;) jk')
         sys.exit(0)
