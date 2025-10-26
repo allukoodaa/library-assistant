@@ -182,8 +182,11 @@ if __name__ == '__main__':
     filepath = os.path.normpath(filepath)
     # Avoid FileNotFoundErrors along the way.
     if not os.path.exists(filepath):
-        print('ERROR!\nFile not found, check filename/path.')
+        print(f'ERROR!\nFile {filepath!r} not found, check filename/path.')
         sys.exit(1)
+    if not os.path.isfile(filepath):
+        print(f'ERROR!\nGiven argument {filepath!r} is not a valid file.')
+        sys.exit(2)
     # Execute main() in the try-except block to exit the program gracefully.
     try:
         main()
