@@ -1,0 +1,21 @@
+[project]
+name = "Library Assistant 3000"
+version = "1.0"
+description = "Coding assignment for VALA"
+authors = [
+    { name = "Aleksi Saari", email = "alesaari@gmail.com" }
+]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.11"
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.14.2"
+]
+
+[tool.ruff]
+line-length = 100
+lint.select = ["E", "F", "W", "C", "N", "B", "I"]
+lint.ignore = ["E501"]
+exclude = [".git", "__pycache__"]
