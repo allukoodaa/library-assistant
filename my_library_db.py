@@ -130,7 +130,7 @@ def alternate_pretty_print(content):
     Prints each column of a row in the database along with the associated header.
     """
     # User is informed of the chance in printing style.
-    input('Reverting to alternate printing. Press any key to continue. ')
+    input('Reverting to alternate printing. Press "Enter" to continue. ')
     for index, line in enumerate(content, 1):
         t, a, i, y = line
         print(f'{index}:\nTitle: {t!r}\nAuthor: {a!r}\nISBN: {i!r}\nYear: {y!r}\n')
@@ -189,6 +189,6 @@ if __name__ == '__main__':
     except KeyboardInterrupt:  # User sends Ctrl-C
         print('\nProgram terminated by user. Shutting down.')
         sys.exit(0)
-    except EOFError:  # User sends Ctrl-D or Ctrl-Z+Return
+    except EOFError:  # User sends Ctrl-D or Ctrl-Z+Enter
         print('\nIllegal input: "EOF signal". This incident will be reported. ;) jk')
         sys.exit(0)

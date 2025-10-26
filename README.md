@@ -62,7 +62,7 @@ Entries are stored as slash-separated fields and the file is re-sorted by year e
 
 Select option `2` to display all books.
 - The recommended terminal width is ≥120 columns, absolute minimum for intended printing schema is 110. The standard pretty print renders the database entries in an aligned table with normalized whitespace.
-- Narrower terminals automatically switch to an alternate, per-record layout—just press any key to continue when prompted.
+- Narrower terminals automatically switch to an alternate, per-record layout—just press `Enter` to continue when prompted.
 
 ### Data Format
 
