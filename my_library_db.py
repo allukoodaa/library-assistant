@@ -190,5 +190,5 @@ if __name__ == '__main__':
         print('\nProgram terminated by user. Shutting down.')
         sys.exit(0)
     except EOFError:  # User sends Ctrl-D or Ctrl-Z+Return
-        print('\n input: EOF. This incident will be reported. ;) jk')
+        print('\nIllegal input: "EOF signal". This incident will be reported. ;) jk')
         sys.exit(0)
