@@ -61,7 +61,7 @@ Entries are stored as slash-separated fields and the file is re-sorted by year e
 ### Viewing the Database
 
 Select option `2` to display all books.
-- The recommended terminal width is ≥120 columns, absolute minimum for intended printing schema is 105. The standard pretty print renders the database entries in an aligned table with normalized whitespace.
+- The recommended terminal width is ≥120 columns, absolute minimum for intended printing schema is 110. The standard pretty print renders the database entries in an aligned table with normalized whitespace.
 - Narrower terminals automatically switch to an alternate, per-record layout—just press any key to continue when prompted.
 
 ### Data Format
@@ -75,7 +75,6 @@ Title/Author/ISBN/Year
 Example (`test_data/test_library.txt`):
 
 ```
-Divine Comedy/Dante Alighieri/666/1321
 Idiot/Fyodor Dostoyevsky/9780850670356/1971
 Moby Dick/Herman Melville/9781974305032/1981
 ```
@@ -91,7 +90,7 @@ Feel free to start with the provided samples or create an empty file to begin fr
 ## Troubleshooting
 
 - **`File not found, check filename/path.`** Ensure you passed the correct relative or absolute path.
-- **Terminal too narrow for table view.** Resize your window or continue with the alternate layout when prompted.
+- **Terminal too narrow for table view.** Resize your window while in the main menu or continue with the alternate layout when prompted.
 - **Interrupted session.** `Ctrl+C` or `Ctrl+D` exits gracefully; just rerun the command to restart the program.
 
 ## Disclaimer about AI use in the project

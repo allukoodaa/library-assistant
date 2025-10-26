@@ -104,28 +104,28 @@ def add_book():
 def pretty_print(content):
     """Prints the current database content to the console.
 
-    Preferred console width is at least 120 characters due to the column width normalization.
+    Console width should be at least 110 columns due to the whitespace normalization of the table.
     If the program detects a smaller terminal window, the alternate pretty print function is
     called instead.
     """
     # The database should be in ascending order by publishing year.
     # content.sort(key=lambda line: int(line[-1]))
     # Terminal window too narrow for pretty print.
-    if os.get_terminal_size().columns < 105:
-        print('The minimum terminal window width for this pretty print is 105 characters.')
+    if os.get_terminal_size().columns < 110:
+        print('The absolute minimum terminal window width for the pretty print is 110 columns.')
         alternate_pretty_print(content)
         return
     # Whitespace normalization for header row.
-    print(f'\n{"TITLE":<50}{"AUTHOR":<35}{"ISBN":<15}YEAR')
-    for line in content:
+    print(f'\n{"INDEX":<6}{"TITLE":<50}{"AUTHOR":<35}{"ISBN":<15}YEAR')
+    for ind, line in enumerate(content, start=1):
         # Unpack title, author, isbn and year from the list `line`.
         t, a, i, y = line
         # Whitespace normalization for each row.
-        print(f'{t:<50}{a:<35}{i:<15}{y}')
+        print(f'{ind:<6}{t:<50}{a:<35}{i:<15}{y}')
 
 
 def alternate_pretty_print(content):
-    """Alternate pretty print function for users with terminal windows less than 105 colums.
+    """Alternate pretty print function for users with terminal windows less than 110 colums.
 
     Prints each column of a row in the database along with the associated header.
     """
